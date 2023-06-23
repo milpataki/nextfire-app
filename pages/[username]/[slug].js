@@ -1,4 +1,5 @@
 import PostContent from '@components/PostContent';
+import Metatags from '@components/Metatags';
 import { UserContext } from '@lib/context';
 import { firestore, getUserWithUsername, postToJSON } from '../../lib/firebase';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
@@ -20,7 +21,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { post, path },
-    revalidate: 5000,
+    revalidate: 500,
   };
 }
 
@@ -53,7 +54,8 @@ export default function Post(props) {
 
   return (
     <main className={styles.container}>
-
+      <Metatags title={post.title} description={post.title} />
+      
       <section>
         <PostContent post={post} />
       </section>

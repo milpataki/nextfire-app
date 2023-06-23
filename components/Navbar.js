@@ -11,7 +11,7 @@ export default function Navbar() {
       <ul>
         <li>
           <Link href="/">
-            <button className="btn-logo">FEED</button>
+            <button className="btn-logo">NXT</button>
           </Link>
         </li>
 
@@ -25,7 +25,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <img src={user?.photoURL || 'hacker.png'} />
+                <img src={user?.photoURL || '/hacker.png'} />
               </Link>
             </li>
           </>
