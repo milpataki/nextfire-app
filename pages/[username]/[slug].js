@@ -6,6 +6,7 @@ import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { useContext } from 'react';
 
 export async function getStaticProps({ params }) {
+
   const { username, slug } = params;
   const userDoc = await getUserWithUsername(username);
 
