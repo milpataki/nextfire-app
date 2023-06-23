@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import { useUserData } from '@lib/hooks';
 
 function MyApp({ Component, pageProps }) {
-  const userdata = useUserData();
+  const userData = useUserData();
 
   return (
-    <UserContext.Provider value={userdata}>
+    <UserContext.Provider value={userData}>
       <Navbar />
       <Component {...pageProps} />
       <Toaster />
